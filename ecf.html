@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="ecf.js"></script>
+    <title> contact </title>
+    <style>
+        img {
+            margin-left: 160px;
+            width: 120px;
+            height: 120px;
+            border: 5px groove grey;
+        }
+
+        body>div {
+            margin: auto;
+            width: 50%;
+            border-style: solid;
+            border-width: thick;
+            padding: 10px;
+            background-color: lightgrey;
+        }
+        input, select, textarea, button {
+            border-radius: 5px;
+        }
+        h1 {
+            font: 30px Impact;
+        }
+        #boutonenvoi {
+            background-color: palegreen;
+        }
+        #boutonrefresh {
+            background-color: deepskyblue;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>Contacter le service client</h1>
+        <br>
+        <form id="formClient" action="recup.html" method="get"> <!-- ouverture d'une nouvelle page qui récapitule les infos quand on utilise le bouton submit-->
+            <p>VOTRE DEMANDE:</p>
+            <div>
+                <!-- J'ai placé chaque élément dans une div pour qu'il y ait un élément parent-->
+                <select id="choixdemande" name="demande">
+                    <!--<option value="default">Votre demande concerne</option>
+            <option value="info">Information articles</option>
+            <option value="commande">Commande & paiement</option>
+            <option value="expe">Expédition & livraison</option>
+            <option value="retour">Retour, échange & remboursement</option>
+            <option value="code">Code promo & Bon d'achat</option>
+            <option value="news">Newsletters</option>
+            <option value="pb">Problème technique</option>
+            <option value="autre">Autres demandes</option>
+            <option value="protec">Protection des données personnelles</option>-->
+                </select>
+            </div>
+            <p>MESSAGE: *</p>
+            <div>
+                <textarea id="message" class="texte" name="message" rows="5" cols="30" required></textarea>
+            </div>
+            <p>VOTRE PRENOM: *</p>
+            <div>
+                <input type="text" id="prénom" class="texte" name="prenom" required>
+            </div>
+            <p>VOTRE NOM: *</p>
+            <div>
+                <input type="text" id="nom" class="texte" name="nom" required>
+            </div>
+            <p>VOTRE COURRIEL: *</p>
+            <div>
+                <input type="email" id="mail" class="texte" name="mail" required>
+            </div>
+            <p>VOTRE PHOTO:</p>
+            <div>
+                <select name="photo" id="choixphoto" name="photo">
+                    <!--<option value="default">Choisir photo</option>
+            <option value="alain">alain</option>
+            <option value="albert">albert</option>
+            <option value="alfred">alfred</option>
+            <option value="alphonse">alphonse</option>
+            <option value="alphonsine">alphonsine</option>
+            <option value="berth">berth</option>
+            <option value="elisabeth">elisabeth</option>
+            <option value="gertrude">gertrude</option>
+            <option value="gilbert">gilbert</option>
+            <option value="gilberte">gilberte</option>
+            <option value="hugh">hugh</option>
+            <option value="jacques">jacques</option>
+            <option value="john">john</option>-->
+                </select>
+            </div>
+            <br>
+            <button type="submit" id="boutonenvoi">Envoyer</button>
+            <button type="reset" id="boutonrefresh">Rafraîchir</button>
+            <img id="avatar" src="photos/neutre.jpg" alt="john doe">
+        </form>
+    </div>
+</body>
+
+</html>
