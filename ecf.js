@@ -1,5 +1,5 @@
 window.onload = function () {
-
+    
     class Client {
         constructor(nom, prenom, mail, photo) {
             this._nom = nom;
